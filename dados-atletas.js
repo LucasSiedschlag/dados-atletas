@@ -1,55 +1,55 @@
 class Atleta {
-  constructor(nome, idade, peso, altura, notas) {
-      this.nome = nome;
-      this.idade = idade;
-      this.peso = peso;
-      this.altura = altura;
-      this.notas = notas
-  }
+    constructor(nome, idade, peso, altura, notas) {
+        this.nome = nome;
+        this.idade = idade;
+        this.peso = peso;
+        this.altura = altura;
+        this.notas = notas
+    }
 
-  calculaCategoria() {
-      if (this.idade >= 9 && this.idade <= 11)
-          return "Infantil"
-      if (this.idade >= 12 && this.idade <= 13)
-          return "Juvenil"
-      if (this.idade >= 14 && this.idade <= 15)
-          return "Intermediário"
-      if (this.idade >= 16 && this.idade <= 30)
-          return "Adulto"
-  }
+    calculaCategoria() {
+        if (this.idade >= 9 && this.idade <= 11)
+            return "Infantil"
+        if (this.idade >= 12 && this.idade <= 13)
+            return "Juvenil"
+        if (this.idade >= 14 && this.idade <= 15)
+            return "Intermediário"
+        if (this.idade >= 16 && this.idade <= 30)
+            return "Adulto"
+    }
 
-  calculaIMC() {
-      return this.peso / (this.altura * this.altura)
-  }
+    calculaIMC() {
+        return this.peso / (this.altura * this.altura)
+    }
 
-  calculaMediaValida() {
-      let soma = 0
-      let media = 0
-      let notas = this.notas.sort()
-      let notasComputadas = notas.slice(1,4)
-      
-      notasComputadas.forEach(function(nota) {
-          soma = soma + nota
-      })
-      media = soma / notasComputadas.length
-      return media
-  }
-  
-  obtemNomeAtleta(){
-      return this.nome
-  }
+    calculaMediaValida() {
+        let soma = 0
+        let media = 0
+        let notas = this.notas.sort()
+        let notasComputadas = notas.slice(1,4)
+        
+        notasComputadas.forEach(function(nota) {
+            soma = soma + nota
+        })
+        media = soma / notasComputadas.length
+        return media
+    }
 
-  obtemIdadeAtleta() {
-      return this.idade;
-  }
+    obtemNomeAtleta(){
+        return this.nome
+    }
 
-  obtemPesoAtleta() {
-      return this.peso;
-  }
+    obtemIdadeAtleta() {
+        return this.idade;
+    }
 
-  obtemNotasAtleta() {
-      return this.notas;
-  } 
+    obtemPesoAtleta() {
+        return this.peso;
+    }
+
+    obtemNotasAtleta() {
+        return this.notas;
+    } 
 }
 
 // Declara o atleta
